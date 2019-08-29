@@ -61,7 +61,7 @@ public class ImageController {
     public void destroy (Images file) {
         Connection connect = ConnectionFactory.getConnection();
         PreparedStatement stmt = null;
-        
+
         try {
           stmt = connect.prepareStatement("DELETE FROM images WHERE id = ?");
 
