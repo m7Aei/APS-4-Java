@@ -45,7 +45,7 @@ public class ImageController {
                 Images file = new Images();
 
                 file.setId(results.getInt("id"));
-                file.setImage(results.getBytes("images"));
+                file.setImage(results.getBytes("image"));
 
                 listaImages.add(file);
             }
