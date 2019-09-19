@@ -35,7 +35,7 @@ public class ImageController {
         PreparedStatement stmt = null;
         ResultSet results = null;
 
-        List<Images> listaImages = new ArrayList<>();
+        List<Images> listaImages = new ArrayList();
 
         try {
             stmt = connect.prepareStatement("SELECT * FROM images");

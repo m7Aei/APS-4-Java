@@ -7,21 +7,17 @@ public class ordinationMethods {
     ImageController images = new ImageController();
 
     // Criando o metodo burble sort
-    public void burbleSort () {
+    public void insertionSort (int array[]) {
         images.index();
-        int maximo = 0;
-        int i;
         int tamanhoArray = images.index().size();
-        int arrayMenor = tamanhoArray - 1;
-
-        for (i = 0; i < tamanhoArray; i++) {
-            for (int y = 0; y < arrayMenor; y++) {
-                 if (arrayMenor > arrayMenor + 1) {
-                     maximo = arrayMenor;
-                     arrayMenor += 1;
-                     arrayMenor = maximo;
-                 }
+        for (int var = 1; var < tamanhoArray; var++) {
+            int insertion = array[var];
+            int i = var - 1;
+            while ((i > -1) && (array [i] > insertion)) {
+                array [i+1] = array [i];
+                i--;
             }
+            array[i+1] = insertion;
         }
     }
 }
